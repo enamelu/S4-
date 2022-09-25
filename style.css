@@ -1,0 +1,35 @@
+#cards {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  /*卡片在容器裡的排版 */
+  
+  box-sizing: border-box;
+  /* 內邊框不會增加容器的大小，預定義的大小將保持不變。我們可以使用 box-sizing 屬性在 CSS 中建立一個內邊框。將 box-sizing 屬性設定為 border-box 將包括容器尺寸內的邊框和內邊距。 */
+
+  flex: 7% 0 1; /*flex-basis ,flex-grow,flex-shrink*//* 每個 item 分配容器寬度 */
+  height: 8vw; /* 依視窗的寬度等比例變化 */
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+
+  /*卡片內部元素的排版*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child{
+  transform: rotate(180deg);
+}
